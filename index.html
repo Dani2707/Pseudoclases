@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases de CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Pseudoclases principales de CSS3</h1>
+            <p>Es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. 
+            Por ejemplo,  :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:Active</h2>
+                <p>Representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la "activación" 
+                generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta
+                </p>
+                <a href="#"><button type="button" class="btn btn-dark active">AQUI HAZ CLIC</button></a>
+                <br>
+                <br>
+                <p>La pseudo-clase :activese usa comúnmente en los elementos a y button, pero también se puede usar en otros elementos</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Checked</h2>
+                <p>Representa cualquier radio  ( <input type="radio"> (en-US) ),  checkbox  ( <input type="checkbox"> ) u  option  
+                ( <option>en un elemento <select>) que está marcado o conmutado a un estado on_.</p>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="radio" name="1" id="1">
+                <br>
+                <input type="radio" name="1" id="1">
+                <br>
+                <br>
+                <p>El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Default</h2>
+                <p>Representa cualquier elemento de formulario que sea el predeterminado entre un grupo de elementos relacionados..</p>
+                <input type="checkbox" name="" id="" checked>
+                <br>
+                <input type="checkbox" name="" id="">
+                <br>
+                <input type="radio" name="" id="">
+                <br>
+                <input type="radio" name="" id="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:Disabled</h2>
+                <p>epresenta cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser seleccionado, 
+                hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene ademas un estado habilitado en el cual puede ser activado o recibir foco.</p>
+                <input type="text">
+                <br>
+                <br>
+                <input type="text">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Empty</h2>
+                <p>Representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las 
+                instrucciones de procesamiento no afectan si un elemento se considera vacío.</p>
+                <div class="empty"></div>
+                <br>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Enabled</h2>
+                <p>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir,
+                    seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el
+                    foco.</p>
+                <input type="text" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center">:First-child / :Last-child</h2>
+                <p>Representa el primer elemento entre un grupo de elementos hermanos.</p>
+                <ul>
+                    <li>Diferente (FIRST)</li>
+                    <li>AQUI</li>
+                    <li>AQUI</li>
+                    <li>AQUI</li>
+                    <li>AQUI</li>
+                    <li>Diferente (LAST)</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Focus</h2>
+                <p>epresenta un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el 
+                usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.:focus</p>
+                <input type="text" class="focus" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" class="focus" placeholder="Campo disponible">
+                <br>
+                <br>
+                <input type="text" disabled placeholder="Campo no disponible">
+            </div>
+            <div class="col-md-4">
+                <h2 class="text-center">:Hover</h2>
+                <p>coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no lo activa. Generalmente 
+                se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).</p>
+                <a href="#" class="boton">Presiona Aqui</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">:Valid</h2>
+                <p>Representa cualquier elemento <input> u otro elemento <form> cuyo contenido se valide (en-US) satisfactoriamente. Esto permite 
+                    que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados 
+                    correctamente.</p>
+                <input type="email" name="" id="" class="valid" value="loqsea@gmail.com" placeholder="email">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center">:Visited</h2>
+                <p>Representa enlaces que el usuario ya ha visitado. Por motivos de privacidad, los estilos que se pueden modificar con este selector son muy limitados.</p>
+                <a href="#" class="visited">Aqui</a>
+                <br>
+                <a href="#" class="visited">Aqui</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
